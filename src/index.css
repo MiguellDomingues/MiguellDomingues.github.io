@@ -1,13 +1,246 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+    body {
+        @apply font-[Raleway];
+    }
+    li {
+        @apply px-4;
+        @apply cursor-pointer
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
 }
+
+.content-div:hover {
+    background-image: linear-gradient(
+        to right,
+        #facc15,
+        #ea580c
+    )!important;
+}
+
+@media all and (min-width: 980px) {
+    /* CSS rules here for screens above 750px */
+   
+
+    .typeWriter {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0; /* Gives that scrolling effect as the typing happens */
+        animation: 
+          typing 8s steps(30, end) infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        0% { width: 0 }
+        50% { width: 100% }
+        100% {width:0}
+      }
+
+
+     
+
+      
+    }
+
+    #timeline {
+        color: white;
+        overflow-x: hidden;
+      }
+      #timeline ul {
+        padding: 0px 0;
+      }
+      /* Create Line */
+      #timeline ul li {
+        list-style: none;
+        position: relative;
+        display:block;
+        width: 6px;
+        padding:0;
+        margin-left: 10px;
+        /*margin: 0 auto;*/
+        padding-top: 50px;
+        background: rgb(219 39 119);
+      }
+      /* Boxes */
+      #timeline ul li div.card {
+        position: relative;
+        bottom: 0;
+        width: calc(100vw - 90px);
+        max-width: 800px;
+        padding: 1rem;
+        background: white;
+        color: black;
+        border: 3px solid rgb(219 39 119);
+        transition: all 0.5s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      /* Dots */
+      #timeline ul li:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 25px;
+        height: 25px;
+        background: inherit;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        transition: background 0.5s ease-in-out;
+      }
+      /* Arrows Base */
+      #timeline div.card:before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-radius: 2px;
+      }
+
+      
+      /* Right Side */
+      #timeline ul li:nth-child(even) div.card {
+        
+        left: 40px;
+        transform: translate(200px, 0);
+        
+        
+      }
+      /* Left Side */
+      #timeline ul li:nth-child(odd) div.card {
+        /*
+        left: -434px;
+        transform: translate(-200px, 0);
+        */
+        left: 40px;
+        transform: translate(200px, 0);
+      }
+
+      /* Right Side Arrows */
+      #timeline ul li:nth-child(even) div.card:before {
+        left: -18px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent rgb(219 39 119) transparent transparent;
+      }
+      /* Left Side Arrows */
+      #timeline ul li:nth-child(odd) div.card:before {
+      /*
+        right: -18px;
+        border-width: 8px 0 8px 16px;
+        border-color: transparent transparent transparent rgb(219 39 119);
+        */
+        left: -18px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent rgb(219 39 119) transparent transparent;
+      }
+
+
+      /* Show Boxes */
+      #timeline ul li.show div.card {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+      }
+      #timeline ul li.show:after {
+        background: rgb(219 39 119);
+      }
+      #timeline div.card {
+        border-radius: 12px;
+      }
+      /*
+      @media (max-width: 900px) {
+        #timeline ul li div {
+          width: 250px;
+        }
+        #timeline ul li:nth-child(even) div {
+          left: -284px;
+        }
+      }
+      */
+      @media (max-width: 600px) {
+        
+        #timeline ul li div.card {
+          width: calc(100vw - 90px);
+        }
+        #timeline ul li:nth-child(even) div.card {
+          left: 40px;
+        }
+        #timeline ul li:nth-child(even) div.card:before {
+          left: -17px;
+          border-width: 8px 16px 8px 0;
+          border-color: transparent rgb(219 39 119) transparent transparent;
+        }
+        .experience_header{   
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .skills_experience{
+          width: 100%;
+        }
+
+        .skills_experience_container{
+          flex-direction: column;
+        }
+
+        .skill_icons{
+          width: 80%
+        }
+      }
+
+      @media (min-width: 600px) {
+        .experience_header{   
+         place-content: end space-between;
+         align-items: end;  
+        }
+
+        .skills_experience{
+          width: 45%;
+        }
+
+        .skills_experience_container{
+          flex-direction: row;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+       
+      }
+
+      .position {
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .info {
+        margin-bottom: 8px;
+      }
+      .checkmark {
+        color: rgb(219 39 119);
+      }
+
+      .experience_header{   
+        display: flex;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+     
+
+   
+      
