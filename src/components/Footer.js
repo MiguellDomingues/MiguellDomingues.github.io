@@ -3,10 +3,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
-const EMAIL = "mailto:mdomingues1001@gmail.com"
-const LINKEDIN = "https://linkedin.com/in/m-domingues"
-const GITHUB = "https://github.com/MiguellDomingues"
-const RESUME_LINK = "https://drive.google.com/uc?id=127MP1n_1L05m13ZWlmgCBZaUJmFTKUGm&export=download"
+import { EMAIL,LINKEDIN ,GITHUB,RESUME_LINK  } from '../content.js'
 
 const Footer = () => {
 

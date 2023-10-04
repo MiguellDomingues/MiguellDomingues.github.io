@@ -35,10 +35,7 @@ export const Home = () => {
             Always on the lookout for knowledge and new opportunities to hone my skills and broaden my skillset.
             </p>
 
-            <p className=' text-black py-4 max-w-[700px]'>I'm a full-stack developer specializing in building (and occassionally designing) exceptional digital experience.
-            Currently, I'm focused on building responsive full-stack web applications.
-            
-            
+            <p className=' text-black py-4 max-w-[700px]'>
             
             </p>
 

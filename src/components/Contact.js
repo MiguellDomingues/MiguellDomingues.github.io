@@ -51,7 +51,7 @@ function messageFailed(){
 }
 
   return (
-    <div name='contact' className='w-full bg-white flex justify-center items-center p-8'>
+    <div name='contact' className='w-full bg-white flex justify-center items-center px-8 pt-8'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div className='pb-8 flex justify-center'>
             <p className='text-4xl font-bold inline border-b-4 text-black border-pink-600'>Contact</p> 
