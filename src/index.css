@@ -240,6 +240,13 @@
         margin-bottom: 10px;
       }
 
+      .contact_form_message{
+        position: absolute;
+        display: flex;
+        top: 30%;
+        flex-direction: column;
+        align-items: center;
+      }
      
 
    
