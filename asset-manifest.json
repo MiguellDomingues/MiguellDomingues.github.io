@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c97b382.css",
-    "main.js": "/static/js/main.a5270f84.js",
+    "main.css": "/static/css/main.6fba1763.css",
+    "main.js": "/static/js/main.7da667e3.js",
     "static/media/bcvapefinder.png": "/static/media/bcvapefinder.c0fefe01b4156e668600.png",
     "static/media/portfolio_img_resized.png": "/static/media/portfolio_img_resized.3ef59d62f0acfbc4084e.png",
     "static/media/GraphQL.png": "/static/media/GraphQL.0fed447ce4ed74374bdb.png",
@@ -14,11 +14,11 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/java.png": "/static/media/java.6c64373d3b7415758078.png",
     "index.html": "/index.html",
-    "main.2c97b382.css.map": "/static/css/main.2c97b382.css.map",
-    "main.a5270f84.js.map": "/static/js/main.a5270f84.js.map"
+    "main.6fba1763.css.map": "/static/css/main.6fba1763.css.map",
+    "main.7da667e3.js.map": "/static/js/main.7da667e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c97b382.css",
-    "static/js/main.a5270f84.js"
+    "static/css/main.6fba1763.css",
+    "static/js/main.7da667e3.js"
   ]
 }
