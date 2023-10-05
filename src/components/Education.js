@@ -30,7 +30,7 @@ const Education = () => {
         <div name='education' className=' flex flex-col gap-10 items-center skills_experience'>  
 
             <div className="flex items-center justify-center">                 
-                <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-center w-min'>Academic Honors</p>
+                <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-center honors_header'>Academic Honors</p>
             </div>  
             
             <div className="flex flex-col justify-center items-center">
