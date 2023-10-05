@@ -2,11 +2,23 @@ import React from 'react'
 
 import { project_tiles_datas } from '../content.js'
 
+const is_mobile = (window.innerWidth || document.documentElement.clientWidth) <= 650;
+
 const Work = () => {
+
+  const getHeaderCSS = (is_mobile) =>{
+    const css = ['pb-8','width-full' ,'flex']
+    if(is_mobile){
+      css.push('justify-center')
+    }
+
+    return css.join(' ')
+  }
+
   return (
     <div name='work' className='w-full md:h-auto text-black bg-white py-8'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
+        <div className={getHeaderCSS(is_mobile)}>
           <p className='text-4xl font-bold inline border-b-4 text-black border-pink-600'>
             Projects
           </p>

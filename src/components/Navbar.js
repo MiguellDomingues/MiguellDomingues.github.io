@@ -47,7 +47,7 @@ export const Navbar = () => {
           </Link>
         </li>
         <li  className=' hover:text-black'>
-          <Link to='skills' smooth={true} duration={500} offset={-76}>
+          <Link to='education' smooth={true} duration={500} offset={-76}>
             Education
           </Link>
         </li>     

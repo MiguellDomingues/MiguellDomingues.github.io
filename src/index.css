@@ -196,10 +196,16 @@
 
         .skills_experience_container{
           flex-direction: column;
+          gap: 30px;
         }
 
         .skill_icons{
           width: 80%
+        }
+
+        .skill_img_dimensions{
+          height: 50px;
+          width: 50px;
         }
       }
 
@@ -219,13 +225,21 @@
           gap: 1rem;
         }
 
+        .position{
+          margin-bottom: 5px;
+        }
+
+        .skill_img_dimensions{
+          height: 100px;
+          width: 100px;
+        }
+
        
       }
 
       .position {
         font-style: italic;
         font-size: 14px;
-        margin-bottom: 5px;
       }
       .info {
         margin-bottom: 8px;
@@ -247,7 +261,17 @@
         flex-direction: column;
         align-items: center;
       }
-     
+
+      .mobile_experience_card{
+        box-shadow: 0px 0px 0px 4px rgb(219 39 119);
+      }
+
+      .skill_img_container{
+        width: auto;
+        max-height: 100%;
+      }
+
+      
 
    
       

@@ -51,13 +51,13 @@ function messageFailed(){
 }
 
   return (
-    <div name='contact' className='w-full bg-white flex justify-center items-center px-8 pt-8'>
+    <div name='contact' className='w-full bg-black text-white flex justify-center items-center px-8'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div className='pb-8 flex justify-center'>
-            <p className='text-4xl font-bold inline border-b-4 text-black border-pink-600'>Contact</p> 
+            <p className='text-4xl font-bold inline border-b-4 text-white border-pink-600'>Contact</p> 
           </div>
           <div className='pb-8 flex justify-center'>
-            <p>
+            <p className="text-2xl">
               If you have any questions, available opportunities or suggestions, leave a message!
             </p>
           </div>
@@ -65,13 +65,13 @@ function messageFailed(){
             <div className='contact_form_message'>
               {message_sent && (message_sending ? <p>sending</p> : message_success ? messageSuccess() : messageFailed()) }
             </div>
-            <form ref={form_ref} onSubmit={sendEmail} className=' flex flex-col max-w-[600px] w-full'>   
+            <form ref={form_ref} onSubmit={sendEmail} className=' flex flex-col max-w-[600px] w-full text-black'>   
                 <input className='shadow-lg shadow-[#040c16]  p-2 rounded-md' type="text" placeholder='Name' name="from_name" required/>
                 <input className='my-4 p-2 shadow-lg shadow-[#040c16] rounded-md' type="email" placeholder='Email'  name="reply_to" required/>
                 <textarea className=' border-black  shadow-lg shadow-[#040c16] p-2 rounded-md' name="message" rows="6" placeholder='Message' required maxLength={400}></textarea>
                 <button 
                   ref={button_ref}
-                  className='text-black border-black border-2 hover:bg-pink-600 hover:text-white hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center'
+                  className='text-white border-2 hover:bg-pink-600 hover:text-white hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center'
                   onClick={e=>{}}>
                     Let's Collaborate
                 </button>

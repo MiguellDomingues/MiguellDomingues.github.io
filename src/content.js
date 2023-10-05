@@ -10,9 +10,12 @@ import Node from './assets/node.png';
 import Mongo from './assets/mongo.png';
 import java from './assets/java.png';
 import graphql from './assets/GraphQL.png'
+import sql from './assets/sql.webp'
+import typescript from './assets/typescript.png'
 
 import bcvapefinder from './assets/bcvapefinder.png';
 import portfolio_img_resized  from './assets/portfolio_img_resized.png'
+import scraper from './assets/scraper.png'
 
 
 export const EMAIL = "mailto:mdomingues1001@gmail.com"
@@ -84,7 +87,7 @@ export const project_tiles_datas = [
       ]
     },
     {
-      bg_image: bcvapefinder,
+      bg_image: scraper,
       title:"A Product Aggregator",
       description: "a nodejs script which extracts, transforms and loads vaping products from e-commerce sites into a cloud-hosted data store",
       source_link: "https://github.com/MiguellDomingues/vape-finder-scraper",
@@ -160,36 +163,44 @@ export const experience_data = [
 
   export const skills_data = [
     {
-        name: "REACT",
+        name: "ReactJS",
         img: ReactImg
     },
     {
-        name: "NODE JS",
+      name: "JavaScript",
+      img: JavaScript
+   },
+   {
+    name: "TypeScript",
+    img: typescript
+  },
+   {
+    name: "Java",
+    img: java
+  },
+   {
+    name: "HTML",
+    img: HTML
+  },
+   {
+    name: "CSS",
+    img: CSS
+   },
+    {
+        name: "NodeJS",
         img: Node
     },
     {
-        name: "MONGO DB",
+        name: "MongoDB",
         img: Mongo
-    },
-    {
-        name: "JavaScript",
-        img: JavaScript
-    },
-    {
-        name: "HTML",
-        img: HTML
-    },
-    {
-        name: "CSS",
-        img: CSS
     },
     {
         name: "GraphQL",
         img: graphql
     },
     {
-        name: "Java",
-        img: java
+      name: "SQL",
+      img: sql
     },
 ]
 
