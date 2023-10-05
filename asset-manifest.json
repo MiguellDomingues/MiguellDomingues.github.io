@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.6fba1763.css",
-    "main.js": "/static/js/main.7da667e3.js",
+    "main.css": "/static/css/main.fbe868d8.css",
+    "main.js": "/static/js/main.cd700ac2.js",
     "static/media/bcvapefinder.png": "/static/media/bcvapefinder.c0fefe01b4156e668600.png",
     "static/media/portfolio_img_resized.png": "/static/media/portfolio_img_resized.3ef59d62f0acfbc4084e.png",
     "static/media/GraphQL.png": "/static/media/GraphQL.0fed447ce4ed74374bdb.png",
+    "static/media/scraper.png": "/static/media/scraper.cdd94bf007f9e0455263.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/logo.png": "/static/media/logo.41f90b4f116585caa78a.png",
+    "static/media/sql.webp": "/static/media/sql.3e326d1c9c1e16cea756.webp",
     "static/media/node.png": "/static/media/node.952a9ea986dcfa5229ad.png",
+    "static/media/typescript.png": "/static/media/typescript.4e3f27e6784d69f4f587.png",
     "static/media/mongo.png": "/static/media/mongo.2a1528ddc31d4ce8518d.png",
     "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
     "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/java.png": "/static/media/java.6c64373d3b7415758078.png",
     "index.html": "/index.html",
-    "main.6fba1763.css.map": "/static/css/main.6fba1763.css.map",
-    "main.7da667e3.js.map": "/static/js/main.7da667e3.js.map"
+    "main.fbe868d8.css.map": "/static/css/main.fbe868d8.css.map",
+    "main.cd700ac2.js.map": "/static/js/main.cd700ac2.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fba1763.css",
-    "static/js/main.7da667e3.js"
+    "static/css/main.fbe868d8.css",
+    "static/js/main.cd700ac2.js"
   ]
 }
