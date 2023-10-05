@@ -33,8 +33,9 @@ const Work = () => {
 
 const ProjectTile = ({project_tile_data:{bg_image, title, description, technology_icons_links,source_link,hosted_link}}) =>{
 
-  const wrapCmpWithAnchorTag = (cmp, url, idx) => <a key={idx} className="pointer_link" href={url} target="_blank" rel="noopener noreferrer"><cmp.type {...cmp.props}/></a>
-  //const wrapCmpWithAnchorTag = (cmp, url, idx) => <cmp.type key={idx} {...cmp.props}/>
+  //disabled the links because it's too easy for a user to click on them by accident on mobile
+  //const wrapCmpWithAnchorTag = (cmp, url, idx) => <a key={idx} className="pointer_link" href={url} target="_blank" rel="noopener noreferrer"><cmp.type {...cmp.props}/></a>
+  const wrapCmpWithAnchorTag = (cmp, url, idx) => <cmp.type key={idx} {...cmp.props}/>
 
   return (
     <div
