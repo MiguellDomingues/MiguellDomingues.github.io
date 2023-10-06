@@ -31,29 +31,41 @@ const Work = () => {
   );
 };
 
-const ProjectTile = ({project_tile_data:{bg_image, title, description, technology_icons_links,source_link,hosted_link}}) =>{
+const ProjectTile = ({project_tile_data:{bg_image, bg_video, title, description, technology_icons_links,source_link,hosted_link}}) =>{
+
+  const static_img = bg_image;
+  const mouse_over_img = bg_video ? bg_video : bg_image
+
+  const getBGImageStyle = (img) =>{return { backgroundImage: `url(${img})` }}
+
+  const [bg, setBG] = React.useState(getBGImageStyle(static_img))
 
   //disabled the links because it's too easy for a user to click on them by accident on mobile
   //const wrapCmpWithAnchorTag = (cmp, url, idx) => <a key={idx} className="pointer_link" href={url} target="_blank" rel="noopener noreferrer"><cmp.type {...cmp.props}/></a>
-  const wrapCmpWithAnchorTag = (cmp, url, idx) => <cmp.type key={idx} {...cmp.props}/>
+  const wrapCmpWithAnchorTag = (cmp, url) => <cmp.type  {...cmp.props}/>
 
   return (
-    <div
-      style={{ backgroundImage: `url(${bg_image})`}}
+    <div 
+      onMouseEnter={(e) =>{setBG(getBGImageStyle(mouse_over_img))} }
+      onMouseLeave={ (e) =>{setBG(getBGImageStyle(static_img))} }
+      style={bg}    
       className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div '
     >
       {/* Hover Effects */}
-      <div className='opacity-0 group-hover:opacity-100 h-full flex flex-col p-1 items-center justify-evenly'>
+      <div className='opacity-0 group-hover:opacity-100 h-full flex flex-col p-1 items-center justify-evenly project_tile_overlay'>
         <p className='text-2xl font-bold text-white text-center'>
           {title}
         </p>
 
-        <div className=' text-black px-8 text-center'>   
+        <div className=' text-white px-8 text-center'>   
           {description}      
         </div>
       
         <div className='flex gap-3 flex-wrap items-center justify-center'>     
-          {technology_icons_links.map((icon_link, idx)=>wrapCmpWithAnchorTag(icon_link.icon_cmp, icon_link.link, idx))}
+          {technology_icons_links.map((icon_link, idx)=>
+            <div key={idx} className="icon_wrapper">
+              {wrapCmpWithAnchorTag(icon_link.icon_cmp, icon_link.link, idx)}
+            </div>)}
         </div>
         <div className='text-center'>
           {hosted_link ?

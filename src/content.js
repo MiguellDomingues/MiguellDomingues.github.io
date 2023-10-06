@@ -13,9 +13,14 @@ import graphql from './assets/GraphQL.png'
 import sql from './assets/sql.webp'
 import typescript from './assets/typescript.png'
 
+import bcvapefinder_video from './assets/smaller-video.gif'
 import bcvapefinder from './assets/bcvapefinder.png';
+
 import portfolio_img_resized  from './assets/portfolio_img_resized.png'
+import portfolio_video from './assets/portfolio_video.gif'
+
 import scraper from './assets/scraper.png'
+import scraper_video from './assets/scraper_video.gif'
 
 const GD_RESUME_ID =  (process.env.REACT_APP_GD_RESUME_ID || "")
 
@@ -27,6 +32,7 @@ export const RESUME_LINK = `https://drive.google.com/uc?id=${GD_RESUME_ID}&expor
 export const project_tiles_datas = [
     {
       bg_image: portfolio_img_resized,
+      bg_video: portfolio_video,
       title:"A Portfolio Website",
       description: "v1 of my personal website",
       source_link: "https://github.com/MiguellDomingues/MiguellDomingues.github.io",
@@ -52,6 +58,7 @@ export const project_tiles_datas = [
     },
     {
       bg_image: bcvapefinder,
+      bg_video: bcvapefinder_video,
       title:" A Product Search Portal",
       description: " a browsable catalog of vaping products that were scraped from multiple e-commerce websites ",
       source_link: "https://github.com/MiguellDomingues/vape-finder-client",
@@ -89,6 +96,7 @@ export const project_tiles_datas = [
     },
     {
       bg_image: scraper,
+      bg_video: scraper_video,
       title:"A Product Aggregator",
       description: "a nodejs script which extracts, transforms and loads vaping products from e-commerce sites into a cloud-hosted data store",
       source_link: "https://github.com/MiguellDomingues/vape-finder-scraper",
