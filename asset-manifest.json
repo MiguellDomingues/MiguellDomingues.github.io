@@ -1,7 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.8971ce64.css",
-    "main.js": "/static/js/main.c0a9a47b.js",
+    "main.css": "/static/css/main.b46d852b.css",
+    "main.js": "/static/js/main.bb7f698b.js",
+    "static/media/scraper_video.gif": "/static/media/scraper_video.55f854ecc816b4dbae78.gif",
+    "static/media/smaller-video.gif": "/static/media/smaller-video.0929c1dc9a2d3d5432b5.gif",
+    "static/media/portfolio_video.gif": "/static/media/portfolio_video.bdfbdd4eb4a491076c4a.gif",
     "static/media/bcvapefinder.png": "/static/media/bcvapefinder.c0fefe01b4156e668600.png",
     "static/media/portfolio_img_resized.png": "/static/media/portfolio_img_resized.3ef59d62f0acfbc4084e.png",
     "static/media/GraphQL.png": "/static/media/GraphQL.0fed447ce4ed74374bdb.png",
@@ -17,11 +20,11 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "static/media/java.png": "/static/media/java.6c64373d3b7415758078.png",
     "index.html": "/index.html",
-    "main.8971ce64.css.map": "/static/css/main.8971ce64.css.map",
-    "main.c0a9a47b.js.map": "/static/js/main.c0a9a47b.js.map"
+    "main.b46d852b.css.map": "/static/css/main.b46d852b.css.map",
+    "main.bb7f698b.js.map": "/static/js/main.bb7f698b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8971ce64.css",
-    "static/js/main.c0a9a47b.js"
+    "static/css/main.b46d852b.css",
+    "static/js/main.bb7f698b.js"
   ]
 }
