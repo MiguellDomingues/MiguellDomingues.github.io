@@ -19,7 +19,7 @@ import scraper from './assets/scraper.png'
 
 const GD_RESUME_ID =  (process.env.REACT_APP_GD_RESUME_ID || "")
 
-export const EMAIL = "mailto:mdomingues1001@gmail.com"
+export const EMAIL = (process.env.REACT_APP_EMAIL || "")
 export const LINKEDIN = "https://linkedin.com/in/m-domingues"
 export const GITHUB = "https://github.com/MiguellDomingues"
 export const RESUME_LINK = `https://drive.google.com/uc?id=${GD_RESUME_ID}&export=download`
@@ -113,7 +113,7 @@ export const project_tiles_datas = [
         
       ]
     },
-  ]
+]
 
 export const experience_data = [
     {
@@ -159,10 +159,10 @@ export const experience_data = [
       ]
     },
     
-  ]
+]
 
 
-  export const skills_data = [
+export const skills_data = [
     {
         name: "ReactJS",
         img: ReactImg

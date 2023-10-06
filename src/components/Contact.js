@@ -1,6 +1,8 @@
 import React from 'react'
 import emailjs from '@emailjs/browser';
 
+import { EMAIL } from '../content.js'
+
 const EMAILJS_INFO = {
   SERVICE_ID:  process.env.REACT_APP_SERVICE_ID  || "", 
   TEMPLATE_ID: process.env.REACT_APP_TEMPLATE_ID || "",
@@ -46,7 +48,7 @@ function messageSuccess(){
 
 function messageFailed(){
   return(<p>
-    Sorry, something went wrong! Email me directly at <a href="mailto:mdomingues1001@gmail.com">mdomingues1001@gmail.com</a>
+    Sorry, something went wrong! Feel free to email me <a style={{color: "aqua"}} href={`mailto:${EMAIL}`}>directly</a>
     </p> )
 }
 
@@ -63,7 +65,16 @@ function messageFailed(){
           </div>
           <div className='flex justify-center relative'>
             <div className='contact_form_message'>
-              {message_sent && (message_sending ? <p>sending</p> : message_success ? messageSuccess() : messageFailed()) }
+              {message_sent ? 
+                (message_sending ? 
+                  <p>sending</p> 
+                  : 
+                  message_success ? 
+                    messageSuccess() 
+                    : 
+                    messageFailed()) 
+                : 
+                <></> }
             </div>
             <form ref={form_ref} onSubmit={sendEmail} className=' flex flex-col max-w-[600px] w-full text-black'>   
                 <input className='shadow-lg shadow-[#040c16]  p-2 rounded-md' type="text" placeholder='Name' name="from_name" required/>

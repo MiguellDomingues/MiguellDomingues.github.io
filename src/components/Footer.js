@@ -29,7 +29,7 @@ const Footer = () => {
             <li>
               <a
                 className=' text-white hover:text-black'
-                href={EMAIL}
+                href={`mailto:${EMAIL}`}
               >
                 <HiOutlineMail size={30} />
               </a>
