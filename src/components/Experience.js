@@ -5,33 +5,38 @@ import { experience_data  } from '../content.js'
 
 const is_mobile = (window.innerWidth || document.documentElement.clientWidth) <= 650;
 
-const Experience = () => {
+const FROM_TOP = 0.5;
+const FROM_BOTTOM = 0.5;
 
+const Experience = () => {
 
     useEffect(()=>{
         const items = document.querySelectorAll("#timeline li");
-        const isInViewport = el => {
-          const rect = el.getBoundingClientRect();
-          const result = 
-          rect.top >= 0 && 
-          rect.left >= 0 && 
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+        const isInViewport = (container, top_percent = 0.0, bottom_percent = 0.0) => {
 
-          /*
-          if(rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)){
-            console.log("box bottom", rect.bottom, "<= client height", document.documentElement.clientHeight)
-            console.log(rect)
+          if(top_percent > 1.0 || top_percent < 0.0){
+            top_percent = 0.0;
           }
-          */
+          if(bottom_percent > 1.0 || bottom_percent < 0.0){
+            bottom_percent = 0.0;
+          }
+          
+          const rect = container.getBoundingClientRect();
 
+          const result = 
+          //rect.top >= 0 &&    
+          rect.top >= -1*(rect.height*top_percent) &&   // when the midpoint height of the container is scrolled into view from the TOP of the page
+          //rect.left >= 0 && 
+          //rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) 
+          rect.bottom - (rect.height*bottom_percent) <= (window.innerHeight || document.documentElement.clientHeight) // when the midpoint height of the container is scrolled into view from BOTTOM of the page
+          //rect.right <= (window.innerWidth || document.documentElement.clientWidth);
           return result
         };
 
         const run = () => {
 
           items.forEach(item => {
-            if (isInViewport(item) || is_mobile) {
+            if (isInViewport(item, FROM_TOP , FROM_BOTTOM) || is_mobile) {       
               item.classList.add("show");
             }else{
               item.classList.remove("show");
@@ -66,7 +71,7 @@ const Experience = () => {
         { !is_mobile ?
           <section id="timeline" className='p-0'>
             <ul className='p-0'>
-              {experience_data.map((data, idx)=><ExperienceItem key={idx} experience_data={data}/>)}
+                {experience_data.map((data, idx)=><ExperienceItem key={idx} experience_data={data}/>)}
             </ul>
           </section> 
           : <div>
@@ -92,7 +97,7 @@ const ExperienceItem = ({experience_data: {position, company, dates, duties}}) =
 
     return css.join(' ')
   }
-// bg-white text-black rounded-3xl p-2 mb-2 mobile_experience_card
+
   return(
     <li>
       <div className={getSectionCSS(is_mobile)}>      
