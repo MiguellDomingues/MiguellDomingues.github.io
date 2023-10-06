@@ -7,12 +7,12 @@ const dates = `Oct 2015 - Oct 2021`
 const Education = () => {
 
   return (
-    <div name='skills' className='w-full bg-white flex flex-col justify-center items-center text-black py-8'>
+    <div name='education' className='w-full bg-white flex flex-col justify-center items-center text-black py-8'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 w-full h-full flex skills_experience_container'>      
      
-        <div name='education' className=' flex flex-col gap-10 items-center skills_experience'>                     
-            <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>Education</p>
+        <div className=' flex flex-col gap-10 items-center skills_experience'>                     
+            <p className='text-4xl font-bold inline border-b-4 border-pink-600'>Education</p>
             <span className="font-bold text-2xl text-center">{position}</span>
             <div className="flex flex-col justify-center items-center">
                 <p className="position">{company}</p>
@@ -27,7 +27,7 @@ const Education = () => {
             </div>
         </div>   
 
-        <div name='education' className=' flex flex-col gap-10 items-center skills_experience'>  
+        <div className=' flex flex-col gap-10 items-center skills_experience'>  
 
             <div className="flex items-center justify-center">                 
                 <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-center honors_header'>Academic Honors</p>
@@ -39,8 +39,7 @@ const Education = () => {
             </div>
 
             <div className="flex flex-col justify-center items-center">
-                <span className="text-center">
-                KPU Endowed Information Technology Award</span>
+                <span className="text-center">KPU Endowed Information Technology Award</span>
                 <p className="position">Sep 2018</p>
             </div>
 
